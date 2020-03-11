@@ -84,7 +84,7 @@ body {
 }
 
 #wrap-1:hover {
-    border-right: 3px solid lightseagreen;
+    border-right: 3px solid #5DADE2;
     width: 25%;
     
 }
@@ -255,7 +255,7 @@ body {
 }
 .ancCenter {
     transition: .2s;
-    background-color: #73C6B6!important;
+    background-color: #5DADE2!important;
     top: 30%!important;
     left: 33.5%!important;
     width: 10px!important;
