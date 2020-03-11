@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poiret One', cursive;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+    display: none;
+  }
+  
+  /* Track 
+  ::-webkit-scrollbar-track {
+    box-shadow: outset 0 0 5px grey; 
+    border: 1px solid black;
+    border-radius: 5%;
+  }
+   
+   Handle 
+  ::-webkit-scrollbar-thumb {
+    background: #34495E; 
+    border-radius: 10px;
+    
+  }
+  
+  Handle on hover 
+  ::-webkit-scrollbar-thumb:hover {
+    background: mediumslateblue; 
+  }*/
+
+  /* Landing Page */
+#body_wrap {
+    width: 100%;
+    height: 100%;
+}
+
+#landing {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    font-size: 2rem;
+    scroll-behavior: smooth;
+
+}
+
+#l-wrapper {
+    height: 100%;
+    width: 100%;
+
+}
+#page2 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: yellow;
+    background-size: cover;
+}
+
+
+#page3 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: whitesmoke;
+    background-size: cover;
+}
+
+
+#wrap-1{
+    position: absolute;
+    width: 5%;
+    height: 300%;
+    background-color: black;
+    transition: .9s;
+    z-index: 2;
+    scroll-behavior: smooth;
+
+}
+
+#wrap-1:hover {
+    border-right: 3px solid lightseagreen;
+    width: 25%;
+    
+}
+
+#test {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#test h2:first-child {
+    position: fixed;
+    top: 20%;
+    transform: translateX(100%);
+    visibility: hidden;
+    
+}
+
+#test h2:nth-child(2) {
+    position: fixed;
+    top: 30%;
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+#test h2:nth-child(3) {
+    position: fixed;
+    top: 40%;
+    transform: translateX(100%);
+    visibility: hidden;
+}
+#test h2:nth-child(4) {
+    position: fixed;
+    top: 50%;
+    transform: translateX(100%);
+    visibility: hidden;
+}
+#wrap-1:hover h2 {
+    transition: 1s;
+    transform: translateX(5%);
+    visibility: visible;
+    font-size: 110%!important;
+}
+
+#test a {
+    text-decoration: none;
+}
+
+#test a:visited {
+    color: white;
+}
+
+#wrap-1 h2 {
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+#wrap-2 {
+    width:100%;
+    height: 100%;
+    background: whitesmoke;
+    background-size: cover;
+}
+#cWrap {
+    width: 75%;
+    height: 100%;
+    position: relative;
+    left: 25%;
+}
+
+#textBox {
+    font-size: 1.5rem;
+    position: relative;
+    top: 25%;
+
+}
+
+#textBox h1 {
+    padding-top: 6%;;
+}
+
+#logo {
+    position: fixed;
+    width: 5%;
+    height: 8%;
+    right: .2%;
+    top: 1%;
+    background: url(../img/Logo_v1.png) center/cover transparent;
+    z-index: 3;    
+}
+
+#logo:hover {
+    transition: .5s;
+    opacity: .6;
+}
+
+#logo a {
+    height: 100%;
+    width: 100%;
+}
+
+#box1 {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Cursor Styling */
+
+#cursor { 
+    position: fixed;
+    width: 30px;
+    height: 30px; /* as the half of the width */
+    pointer-events: none;
+    z-index: 3;
+    }
+
+#cursor2 { 
+    position: fixed;
+    width: 30px;
+    height: 28px; /* as the half of the width */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 3px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    z-index: 3;
+    pointer-events: none;
+    }
+
+
+#cursor3 { 
+    position: fixed;
+    width: 30px;
+    height: 28px; /* as the half of the width */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 3px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    z-index: 3;
+    pointer-events: none;
+    }
+#cursor4 { 
+    position: relative;
+    background-color: black;
+    width: 2px;
+    height: 15px; /* as the half of the width */
+    z-index: 3;
+    pointer-events: none;
+    top: 22%;
+    left: 45.5%;
+    }  
+
+.ancLeft {
+    transition: .3s;
+    transform: scale(.75) rotate(90deg);
+
+}
+
+.ancRight {
+    transition: .3s;
+    transform: scale(.75) rotate(90deg);
+
+}
+.ancCenter {
+    transition: .2s;
+    background-color: #73C6B6!important;
+    top: 30%!important;
+    left: 33.5%!important;
+    width: 10px!important;
+    height: 10px!important;
+    border-radius: 50%;
+    border: .2px solid black;
+}
+
+
