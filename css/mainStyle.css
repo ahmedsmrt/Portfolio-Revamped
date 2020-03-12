@@ -375,12 +375,32 @@ body {
     background: url(../img/VGSkull.jpg) center/cover;
 }
 
+#imgContain-2 {
+    position: absolute;
+    top: 40%;
+    left: 90%;
+    height: 63%!important;
+    width: 70%!important;
+    background: url(../img/computer.jpg) center/cover;
+}
+
+#imgContain-3 {
+    position: absolute;
+    top: -30%;
+    left: 88%;
+    height: 63%!important;
+    width: 70%!important;
+    background: url(../img/VGSkull.jpg) center/cover;
+}
+
 
 #img2 {
+    top: -10%;
+    left: -15%;
     position: relative;
-    height: 100%;
-    width: 100%;
-    transition: 1s;
+    width: 135%;
+    height: 135%;
+    transition: 2s;
 }
 
 #img2:hover {
@@ -388,10 +408,12 @@ body {
     transform: rotate(-3deg);
 }
 #img3 {
+    top: -10%;
+    left: -15%;
     position: relative;
-    height: 100%;
-    width: 100%;
-    transition: 1s;
+    width: 135%;
+    height: 135%;
+    transition: 2s;
 }
 
 #img3:hover {
