@@ -20,7 +20,7 @@ cursor4 = document.getElementById('cursor4'),
 navWrap = document.getElementById('navWrap'),
 lineWrap = document.getElementById('lineWrap'),
 linksArr = navWrap.querySelectorAll('a'),
-linesArr = lineWrap.querySelectorAll('div'),
+linesArr = lineWrap.querySelectorAll('div');
 link1 = document.getElementById('link1'),
 line1 = document.getElementById('line1');
 anchors.forEach((e) => {
@@ -40,28 +40,20 @@ anchors.forEach((e) => {
     },false )
 })
 
+// NavBar Animation
 
-function arrLooper(e) {
-    for (var i = 0; i< e.length; i++) {
-        e[i].addEventListener('mouseover', function(event) {
-            event = linesArr;
+linksArr.forEach((e, i) => {
+        linksArr[i].addEventListener('mouseover', function(event) {
             linesArr[i].style.transition ='.4s';
-            linesArr[i].style.transform = 'translateX(100%)';
+            linesArr[i].style.opacity = 0;
+            linesArr[i].style.transform = 'translateX(300%)';        
         })
-        console.log(e[i]);
-    }
-}
+        linksArr[i].addEventListener('mouseleave', function(event) {
+            linesArr[i].style.transition ='.4s';
+            linesArr[i].style.opacity = 1;
+            linesArr[i].style.transform = 'translateX(-30%)';         
+        })
 
-arrLooper(linksArr);
-
-// Nav
-
-link1.addEventListener('mouseover', function(event) {
-    line1.style.transition ='.4s';
-    line1.style.transform = 'translateX(100%)'; 
-});
-link1.addEventListener('mouseleave', function(event) {
-    line1.style.transform = 'translateX(-30%)'; 
 });
 
 
@@ -72,12 +64,27 @@ wrap_1.addEventListener('mouseover', function(event) {
     cursor2.style.borderColor = 'white';
     cursor3.style.borderColor = 'white';
     cursor4.style.backgroundColor = 'white';
-
+    linesArr.forEach((e) => {
+        linesArr[0].style.opacity = '1';
+        linesArr[1].style.opacity = '1';
+        linesArr[2].style.opacity = '1';
+        linesArr[3].style.opacity = '1';
+    });
 }, false)
 wrap_1.addEventListener('mouseleave',function(event) {
     cursor2.style.borderColor = 'black';
     cursor3.style.borderColor = 'black';
     cursor4.style.backgroundColor = 'black';
+    linesArr.forEach((e) => {
+        linesArr[0].style.opacity = '0';
+        linesArr[0].style.transition = '1s';
+        linesArr[1].style.opacity = '0';
+        linesArr[1].style.transition = '.75s';
+        linesArr[2].style.opacity = '0';
+        linesArr[2].style.transition = '.5s';
+        linesArr[3].style.opacity = '0';
+        linesArr[3].style.transition = '.25s';
+    });
 },false )
 
 console.log(document.timeline);

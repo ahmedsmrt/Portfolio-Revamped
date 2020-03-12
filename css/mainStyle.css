@@ -54,6 +54,13 @@ body {
     width: 100%;
 
 }
+
+
+
+
+
+/* Page 2 */
+
 #page2 {
     position: relative;
     height: 100%;
@@ -63,6 +70,8 @@ body {
 }
 
 
+/* Page 3 */
+
 #page3 {
     position: relative;
     height: 100%;
@@ -71,12 +80,17 @@ body {
     background-size: cover;
 }
 
-/* SideBar */
+
+
+
+
+/* SideBar Navbar */
 #wrap-1{
     position: absolute;
     width: 5%;
     height: 300%;
     background-color: black;
+    opacity: .85;
     transition: .9s;
     z-index: 2;
 }   
@@ -89,38 +103,39 @@ body {
     width: 25%;
     background-color: transparent;
     visibility: hidden;
+    overflow: hidden;
 }
 
 #line1, #line2, #line3, #line4 {
     position: relative;
-    right: -5;
     height: 1.5px;
     margin-bottom: 15%;
     width: 100%;
-    background-color: whitesmoke;
+    background-color:  #EB984E;
     transform: translateX(100%);
-    visibility: hidden;
+    z-index: 2;
+    opacity: 0;
 }
 
 #wrap-1:hover #line1 {
     transition: 1s;
-    visibility: visible;
+    opacity: 1;
     transform: translateX(-30%);
 }
 
 #wrap-1:hover #line2 {
     transition: .75s;
-    visibility: visible;
+    opacity: 1;
     transform: translateX(-30%);
 }
 #wrap-1:hover #line3 {
     transition: .5s;
-    visibility: visible;
+    opacity: 1;
     transform: translateX(-30%);
 }
 #wrap-1:hover #line4 {
     transition: .25s;
-    visibility: visible;
+    opacity: 1;
     transform: translateX(-30%);
 }
 
@@ -158,9 +173,9 @@ body {
     width: 100%;
     content: "";
     height: 1.5px;
-    background-color: #5DADE2;
+    background-color: #EB984E;
     transition: .4s;
-    visibility: hidden;
+    opacity: 0;
     transform:  translateX(-100%);
 } 
 
@@ -171,7 +186,7 @@ body {
 }
 
 #link1:hover {
-    color: #873600!important;
+    color: #5DADE2!important;
 }
 
 #link2::before {
@@ -180,7 +195,7 @@ body {
     width: 100%;
     content: "";
     height: 1.5px;
-    background-color: #5DADE2;
+    background-color: #EB984E;
     transition: .4s;
     visibility: hidden;
     transform:  translateX(-100%);
@@ -193,7 +208,7 @@ body {
 }
 
 #link2:hover {
-    color: #873600!important;
+    color: #5DADE2!important;
 }
 
 #link3::before {
@@ -202,7 +217,7 @@ body {
     width: 100%;
     content: "";
     height: 1.5px;
-    background-color: #5DADE2;
+    background-color: #EB984E;
     transition: .4s;
     visibility: hidden;
     transform:  translateX(-100%);
@@ -215,7 +230,7 @@ body {
 }
 
 #link3:hover {
-    color: #873600!important;
+    color: #5DADE2!important;
 }
 
 
@@ -226,7 +241,7 @@ body {
     width: 100%;
     content: "";
     height: 1.5px;
-    background-color: #5DADE2;
+    background-color: #EB984E;
     transition: .4s;
     visibility: hidden;
     transform:  translateX(-100%);
@@ -239,7 +254,7 @@ body {
 }
 
 #link4:hover {
-    color: #873600!important;
+    color: #5DADE2!important;
 }
 #wrap-1:hover {
     border-right: 3px solid #5DADE2;
@@ -301,24 +316,87 @@ body {
     color: whitesmoke;
 }
 
+/* Section 2 Landing */
+
 #wrap-2 {
     width:100%;
     height: 100%;
     background: whitesmoke;
     background-size: cover;
+    
 }
 #cWrap {
     width: 75%;
     height: 100%;
     position: relative;
     left: 25%;
+    display: flex;
 }
 
 #textBox {
     font-size: 1.5rem;
     position: relative;
     top: 25%;
+}
 
+#imgBox {
+    position: relative;
+    top: 20%;
+    height: 50%;
+    width: 50%;
+}
+
+#imgBox div {
+    position: absolute;
+    width: 450px;
+    height: 500px;
+}
+
+#img1 {
+    top: -10%;
+    left: -15%;
+    position: relative;
+    width: 135%;
+    height: 135%;
+    transition: 2s;
+}
+
+#img1:hover {
+    transition: .5s;
+    transform: rotate(-3deg);
+}
+
+
+#imgContain-1 {
+    position: absolute;
+    left: 10%;
+    height: 63%!important;
+    width: 70%!important;
+    background: url(../img/VGSkull.jpg) center/cover;
+}
+
+
+#img2 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+#img2:hover {
+    transition: .5s;
+    transform: rotate(-3deg);
+}
+#img3 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+#img3:hover {
+    transition: .5s;
+    transform: rotate(-3deg);
 }
 
 #textBox h1 {
@@ -412,6 +490,7 @@ body {
 
 }
 .ancCenter {
+    position: absolute;
     transition: .2s;
     background-color: #5DADE2!important;
     top: 30%!important;
@@ -421,5 +500,3 @@ body {
     border-radius: 50%;
     border: .2px solid black;
 }
-
-
