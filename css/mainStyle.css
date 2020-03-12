@@ -58,7 +58,7 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
-    background: yellow;
+    background: whitesmoke;
     background-size: cover;
 }
 
@@ -71,7 +71,7 @@ body {
     background-size: cover;
 }
 
-
+/* SideBar */
 #wrap-1{
     position: absolute;
     width: 5%;
@@ -79,24 +79,182 @@ body {
     background-color: black;
     transition: .9s;
     z-index: 2;
-    scroll-behavior: smooth;
+}   
 
+#lineWrap {
+    position: fixed;
+    top: 60%;
+    left: -3.5px;
+    height: 60%;
+    width: 25%;
+    background-color: transparent;
+    visibility: hidden;
 }
 
+#line1, #line2, #line3, #line4 {
+    position: relative;
+    right: -5;
+    height: 1.5px;
+    margin-bottom: 15%;
+    width: 100%;
+    background-color: whitesmoke;
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+#wrap-1:hover #line1 {
+    transition: 1s;
+    visibility: visible;
+    transform: translateX(-30%);
+}
+
+#wrap-1:hover #line2 {
+    transition: .75s;
+    visibility: visible;
+    transform: translateX(-30%);
+}
+#wrap-1:hover #line3 {
+    transition: .5s;
+    visibility: visible;
+    transform: translateX(-30%);
+}
+#wrap-1:hover #line4 {
+    transition: .25s;
+    visibility: visible;
+    transform: translateX(-30%);
+}
+
+
+#wrap-1:hover #lineWrap {
+    transition: 1s;
+    visibility: visible;
+}
+
+#line1 {
+    width: 25%;
+    right: -80%;
+}
+
+
+#line2 {
+    width: 25%;
+    right: -70%;
+}
+
+#line3 {
+    width: 25%;
+    right: -60%;
+}
+
+#line4 {
+    width: 25%;
+    right: -50%;
+}
+
+
+#link1::before {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    content: "";
+    height: 1.5px;
+    background-color: #5DADE2;
+    transition: .4s;
+    visibility: hidden;
+    transform:  translateX(-100%);
+} 
+
+#link1:hover:before {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: .8;
+}
+
+#link1:hover {
+    color: #873600!important;
+}
+
+#link2::before {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    content: "";
+    height: 1.5px;
+    background-color: #5DADE2;
+    transition: .4s;
+    visibility: hidden;
+    transform:  translateX(-100%);
+} 
+
+#link2:hover:before {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: .8;
+}
+
+#link2:hover {
+    color: #873600!important;
+}
+
+#link3::before {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    content: "";
+    height: 1.5px;
+    background-color: #5DADE2;
+    transition: .4s;
+    visibility: hidden;
+    transform:  translateX(-100%);
+} 
+
+#link3:hover:before {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: .8;
+}
+
+#link3:hover {
+    color: #873600!important;
+}
+
+
+
+#link4::before {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    content: "";
+    height: 1.5px;
+    background-color: #5DADE2;
+    transition: .4s;
+    visibility: hidden;
+    transform:  translateX(-100%);
+} 
+
+#link4:hover:before {
+    visibility: visible;
+    transform: translateX(0);
+    opacity: .8;
+}
+
+#link4:hover {
+    color: #873600!important;
+}
 #wrap-1:hover {
     border-right: 3px solid #5DADE2;
     width: 25%;
     
 }
 
-#test {
+#navWrap {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-#test h2:first-child {
+#navWrap h2:first-child {
     position: fixed;
     top: 20%;
     transform: translateX(100%);
@@ -104,20 +262,20 @@ body {
     
 }
 
-#test h2:nth-child(2) {
+#navWrap h2:nth-child(2) {
     position: fixed;
     top: 30%;
     transform: translateX(100%);
     visibility: hidden;
 }
 
-#test h2:nth-child(3) {
+#navWrap h2:nth-child(3) {
     position: fixed;
     top: 40%;
     transform: translateX(100%);
     visibility: hidden;
 }
-#test h2:nth-child(4) {
+#navWrap h2:nth-child(4) {
     position: fixed;
     top: 50%;
     transform: translateX(100%);
@@ -130,11 +288,11 @@ body {
     font-size: 110%!important;
 }
 
-#test a {
+#navWrap a {
     text-decoration: none;
 }
 
-#test a:visited {
+#navWrap a:visited {
     color: white;
 }
 
