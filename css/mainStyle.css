@@ -95,12 +95,16 @@ body {
     z-index: 2;
 }   
 
+#wrap-1 a {
+    color: white;
+}
+
 #lineWrap {
     position: fixed;
     top: 60%;
     left: -3.5px;
     height: 60%;
-    width: 25%;
+    width: 20%;
     background-color: transparent;
     visibility: hidden;
     overflow: hidden;
@@ -258,7 +262,7 @@ body {
 }
 #wrap-1:hover {
     border-right: 3px solid #5DADE2;
-    width: 25%;
+    width: 20%;
     
 }
 
@@ -329,27 +333,33 @@ body {
     width: 75%;
     height: 100%;
     position: relative;
-    left: 25%;
+    left: 20%;
     display: flex;
 }
 
 #textBox {
+    height: 50%;
     font-size: 1.5rem;
     position: relative;
     top: 25%;
+    display: flex;
+    flex-direction: column;
 }
+
+
+
 
 #imgBox {
     position: relative;
-    top: 20%;
+    top: 25%;
     height: 50%;
     width: 50%;
 }
 
 #imgBox div {
     position: absolute;
-    width: 450px;
-    height: 500px;
+    width: 75%;
+    height: 110%;
 }
 
 #img1 {
@@ -373,6 +383,26 @@ body {
     height: 63%!important;
     width: 70%!important;
     background: url(../img/VGSkull.jpg) center/cover;
+    opacity: 0;
+    -webkit-transform: rotate(40deg) scale(0.5);
+         -moz-transform: rotate(40deg) scale(0.5);
+            -ms-transform: rotate(40deg) scale(0.5);
+             -o-transform: rotate(40deg) scale(0.5);
+                    transform: rotate(40deg) scale(0.5);
+    -webkit-transition: all 0.8s ease-in-out;
+         -moz-transition: all 0.8s ease-in-out;
+            -ms-transition: all 0.8s ease-in-out;
+             -o-transition: all 0.8s ease-in-out;
+                    transition: all 0.8s ease-in-out;
+}
+
+#img-contain-1.visible {
+    opacity: 1;
+    -webkit-transform: none;
+         -moz-transform: none;
+            -ms-transform: none;
+             -o-transform: none;
+                    transform: none;
 }
 
 #imgContain-2 {
@@ -422,8 +452,12 @@ body {
 }
 
 #textBox h1 {
-    padding-top: 6%;;
+    margin-top: 20%;;
 }
+
+
+
+
 
 #logo {
     position: fixed;
@@ -499,6 +533,20 @@ body {
     top: 22%;
     left: 45.5%;
     }  
+
+#dot {
+    top: 35%;
+    left: 35%;
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    position: relative;
+    background: darkblue;
+    opacity: 0;
+}  
+
+
+ 
 
 .ancLeft {
     transition: .3s;

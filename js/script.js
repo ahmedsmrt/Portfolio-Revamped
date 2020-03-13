@@ -16,7 +16,7 @@ wrap_1 = document.getElementById('wrap-1'),
 logo = document.getElementById('logo'),
 cursor3 = document.getElementById('cursor3'),
 cursor4 = document.getElementById('cursor4'),
-cursor4 = document.getElementById('cursor4'),
+dot = document.getElementById('dot'),
 navWrap = document.getElementById('navWrap'),
 lineWrap = document.getElementById('lineWrap'),
 linksArr = navWrap.querySelectorAll('a'),
@@ -28,15 +28,18 @@ anchors.forEach((e) => {
         cursor2.classList.toggle('ancLeft');
         cursor3.classList.toggle('ancRight');
         cursor4.classList.toggle('ancCenter');
-
+        dot.style.opacity = '1';
     }, false)
     e.addEventListener('mouseleave',function(event) {
         cursor2.style.transition = '.3s';
         cursor3.style.transition = '.3s';
         cursor4.style.transition = '.3s';
+        dot.style.transition = '.3s';
         cursor2.classList.toggle('ancLeft');
         cursor3.classList.toggle('ancRight');
         cursor4.classList.toggle('ancCenter');
+        dot.style.opacity = '0';
+
     },false )
 })
 
@@ -88,5 +91,24 @@ wrap_1.addEventListener('mouseleave',function(event) {
 },false )
 
 console.log(document.timeline);
+
+
+// ScrollMagic Section
+
+// init controller
+var controller = new ScrollMagic.Controller();
+
+// build tween
+
+// build scene and set duration to window height
+new ScrollMagic.Scene({
+    triggerElement: "#imgBox",
+    triggerHook: 0.9,
+    offset: 50, // move trigger to center of element
+    reverse: false // only do once
+})
+.setClassToggle("#imgContain-1", "visible") // add class toggle
+.addIndicators() // add indicators (requires plugin)
+.addTo(controller);
 
 
