@@ -44,7 +44,6 @@ body {
     position: relative;
     width: 100vw;
     height: 100%;
-    font-size: 2rem;
     scroll-behavior: smooth;
 
 }
@@ -101,7 +100,7 @@ body {
 
 #lineWrap {
     position: fixed;
-    top: 60%;
+    top: 70%;
     left: -3.5px;
     height: 60%;
     width: 20%;
@@ -261,7 +260,7 @@ body {
     color: #5DADE2!important;
 }
 #wrap-1:hover {
-    border-right: 3px solid #5DADE2;
+    border-right: 2px solid #5DADE2;
     width: 20%;
     
 }
@@ -304,7 +303,6 @@ body {
     transition: 1s;
     transform: translateX(5%);
     visibility: visible;
-    font-size: 110%!important;
 }
 
 #navWrap a {
@@ -316,9 +314,86 @@ body {
 }
 
 #wrap-1 h2 {
-    font-size: 2rem;
+    font-size: 130%;
     color: whitesmoke;
 }
+
+#handleWrap {
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 5%;
+    background-color: transparent;
+    pointer-events: none;
+    transform: scale(1.5);
+}
+
+#handleWrap .line {
+    position: relative;
+    background-color: whitesmoke;
+    height: 2.5%;
+    width: 1%;
+}
+
+.letter {
+    position: relative;
+    right: .1rem;
+    width: 100%;
+    height: 100%;
+    font-size: .7rem;
+    font-weight: bold;
+    color: white;
+    transform: rotate(-90deg);
+}
+
+#l1 {
+    top: 20%;
+    transition: 1s;
+}
+
+#l2 {
+    top: 5%;
+    transition: 1s;
+}
+
+#l3 {
+    top: 20%;
+    transition: 1s;
+}
+
+#l4 {
+    top: 10%;
+    transition: 1s;
+}
+
+
+
+#trl {
+    top: 45%;
+    left: 48%;
+    transform: rotate(90deg);
+}
+
+#tll {
+    top: 44%;
+    left: 60%;
+    transform: rotate(90deg);
+
+}
+
+#brl {
+    top: 43%;
+    left: 48%;
+    transform: rotate(90deg);
+}
+
+
+#bll {
+    top: 42%;
+    left: 60%;
+    transform: rotate(90deg);
+}
+
 
 /* Section 2 Landing */
 
@@ -330,18 +405,19 @@ body {
     
 }
 #cWrap {
-    width: 75%;
+    width: 100%;
     height: 100%;
     position: relative;
-    left: 20%;
     display: flex;
+    overflow: hidden;
 }
 
 #textBox {
     height: 50%;
-    font-size: 1.5rem;
+    font-size: 150%;
     position: relative;
     top: 25%;
+    left: 20%;
     display: flex;
     flex-direction: column;
 }
@@ -352,22 +428,29 @@ body {
 #imgBox {
     position: relative;
     top: 25%;
+    left: 25%;
     height: 50%;
     width: 50%;
 }
 
-#imgBox div {
+.imgContainer {
     position: absolute;
-    width: 75%;
-    height: 110%;
+    width: 35%;
+    height: 70%;
+    border-radius: 5px;
+    border: .5px solid lightskyblue;
 }
+
+.imgContainer img {
+    width: 135%;
+    height: 135%;
+}
+
 
 #img1 {
     top: -10%;
     left: -15%;
     position: relative;
-    width: 135%;
-    height: 135%;
     transition: 2s;
 }
 
@@ -380,23 +463,22 @@ body {
 #imgContain-1 {
     position: absolute;
     left: 10%;
-    height: 63%!important;
-    width: 70%!important;
     background: url(../img/VGSkull.jpg) center/cover;
-    opacity: 0;
-    -webkit-transform: rotate(40deg) scale(0.5);
-         -moz-transform: rotate(40deg) scale(0.5);
-            -ms-transform: rotate(40deg) scale(0.5);
-             -o-transform: rotate(40deg) scale(0.5);
-                    transform: rotate(40deg) scale(0.5);
-    -webkit-transition: all 0.8s ease-in-out;
-         -moz-transition: all 0.8s ease-in-out;
-            -ms-transition: all 0.8s ease-in-out;
-             -o-transition: all 0.8s ease-in-out;
-                    transition: all 0.8s ease-in-out;
+    /* opacity: 0;
+    -webkit-transform: translateX(-300%);
+         -moz-transform: translateX(-300%);
+            -ms-transform: translateX(-300%);
+             -o-transform: translateX(-300%);
+                    transform: translateX(-300%);
+    -webkit-transition: all 1.15s ease-in-out;
+         -moz-transition: all 1.15s ease-in-out;
+            -ms-transition: all 1.15s ease-in-out;
+             -o-transition: all 1.15s ease-in-out;
+                    transition: all 1.15s ease-in-out; */
 }
 
-#img-contain-1.visible {
+#imgContain-1.visible {
+    transform: translateX(0);
     opacity: 1;
     -webkit-transform: none;
          -moz-transform: none;
@@ -407,20 +489,58 @@ body {
 
 #imgContain-2 {
     position: absolute;
-    top: 40%;
-    left: 90%;
-    height: 63%!important;
-    width: 70%!important;
+    top: 45%;
+    left: 50%;
     background: url(../img/computer.jpg) center/cover;
+    /* opacity: 0;
+    -webkit-transform: translateY(200%);
+         -moz-transform: translateY(200%);
+            -ms-transform: translateY(200%);
+             -o-transform: translateY(200%);
+                    transform: translateY(200%);
+    -webkit-transition: all 1.3s ease-in-out;
+         -moz-transition: all 1.3s ease-in-out;
+            -ms-transition: all 1.3s ease-in-out;
+             -o-transition: all 1.3s ease-in-out;
+                    transition: all 1.3s ease-in-out; */
+}
+
+#imgContain-2.visible {
+    transform: translateX(0);
+    opacity: 1;
+    -webkit-transform: none;
+         -moz-transform: none;
+            -ms-transform: none;
+             -o-transform: none;
+                    transform: none;
 }
 
 #imgContain-3 {
     position: absolute;
-    top: -30%;
-    left: 88%;
-    height: 63%!important;
-    width: 70%!important;
-    background: url(../img/VGSkull.jpg) center/cover;
+    top: -35%;
+    left: 50%;
+    background: url(../img/Bacon_seated.jpg) center/cover;
+    /* opacity: 0;
+    -webkit-transform: translateX(300%);
+         -moz-transform: translateX(300%);
+            -ms-transform: translateX(300%);
+             -o-transform: translateX(300%);
+                    transform: translateX(300%);
+    -webkit-transition: all 1.61s ease-in-out;
+         -moz-transition: all 1.61s ease-in-out;
+            -ms-transition: all 1.61s ease-in-out;
+             -o-transition: all 1.61s ease-in-out;
+                    transition: all 1.61s ease-in-out; */
+}
+
+#imgContain-3.visible {
+    transform: translateX(0);
+    opacity: 1;
+    -webkit-transform: none;
+         -moz-transform: none;
+            -ms-transform: none;
+             -o-transform: none;
+                    transform: none;
 }
 
 
@@ -428,8 +548,6 @@ body {
     top: -10%;
     left: -15%;
     position: relative;
-    width: 135%;
-    height: 135%;
     transition: 2s;
 }
 
@@ -441,8 +559,6 @@ body {
     top: -10%;
     left: -15%;
     position: relative;
-    width: 135%;
-    height: 135%;
     transition: 2s;
 }
 
@@ -452,7 +568,7 @@ body {
 }
 
 #textBox h1 {
-    margin-top: 20%;;
+    margin-top: 20%;
 }
 
 
@@ -493,6 +609,7 @@ body {
     height: 30px; /* as the half of the width */
     pointer-events: none;
     z-index: 3;
+    transform: scale(1.2);
     }
 
 #cursor2 { 
