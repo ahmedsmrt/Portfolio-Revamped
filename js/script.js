@@ -20,9 +20,17 @@ dot = document.getElementById('dot'),
 navWrap = document.getElementById('navWrap'),
 lineWrap = document.getElementById('lineWrap'),
 linksArr = navWrap.querySelectorAll('a'),
-linesArr = lineWrap.querySelectorAll('div');
-link1 = document.getElementById('link1'),
-line1 = document.getElementById('line1');
+linesArr = lineWrap.querySelectorAll('div'),
+line4 = document.getElementById('bll'),
+line2 = document.getElementById('tll'),
+letter4 = document.getElementById('l4'),
+letter2 = document.getElementById('l2');
+line1 = document.getElementById('trl'),
+line3 = document.getElementById('brl'),
+letter1 = document.getElementById('l1'),
+letter3 = document.getElementById('l3');
+
+
 anchors.forEach((e) => {
     e.addEventListener('mouseover', function(event) {
         cursor2.classList.toggle('ancLeft');
@@ -59,11 +67,17 @@ linksArr.forEach((e, i) => {
 
 });
 
+wrap_1.addEventListener('mouseenter', function(event) {
+  
+    animateIn(letter4);
+    animateLine(line4);
+    animateIn(letter2);
+    animateLine(line2);
+    animateLine2(line1);
+    animateLine2(line3);
+    animateIn2(letter3);
+    animateIn2(letter1);
 
-
-
-
-wrap_1.addEventListener('mouseover', function(event) {
     cursor2.style.borderColor = 'white';
     cursor3.style.borderColor = 'white';
     cursor4.style.backgroundColor = 'white';
@@ -75,6 +89,14 @@ wrap_1.addEventListener('mouseover', function(event) {
     });
 }, false)
 wrap_1.addEventListener('mouseleave',function(event) {
+    animateOut(letter4);
+    animateLineOut(line4);
+    animateOut(letter2);
+    animateLineOut(line2);
+    animateOut2(letter3);
+    animateLineOut2(line3);
+    animateOut2(letter1);
+    animateLineOut2(line1);
     cursor2.style.borderColor = 'black';
     cursor3.style.borderColor = 'black';
     cursor4.style.backgroundColor = 'black';
@@ -90,25 +112,65 @@ wrap_1.addEventListener('mouseleave',function(event) {
     });
 },false )
 
-console.log(document.timeline);
+// Letter Animation
+
+// setInterval(() => {
+//     letter1.style.right = '600%';
+//     letter2.style.right = '600%';
+//     setInterval(() => {
+//         letter1.style.right = '.1rem';
+//         letter2.style.right = '.1rem';
+//     }, 500);
+// }, 2000);
+
+function animateIn(element) {
+    element.style.opacity = '0';
+    element.style.transform = 'rotate(0deg)';
+}
+
+function animateOut(element) {
+    element.style.opacity = '1';
+    element.style.transform = 'rotate(-90deg)';
+}
+
+function animateIn2(element) {
+    element.style.opacity = '0';
+    element.style.transform = 'rotate(-180deg)';
+}
+
+function animateOut2(element) {
+    element.style.opacity = '1';
+    element.style.transform = 'rotate(-90deg)';
+}
 
 
-// ScrollMagic Section
+// Line Animation
 
-// init controller
-var controller = new ScrollMagic.Controller();
+function animateLine(element) {
+    if(element.style.left == '48%') {
+    }else {
+        element.style.transition = '.5s';
+        element.style.opacity = '0';
+        element.style.left = '48%';
+    }
+}
 
-// build tween
+function animateLine2(element) {
+    if(element.style.left == '60%') {
+    }else {
+        element.style.left = '60%';
+        element.style.transition = '.5s';
+        element.style.opacity = '0';
+    }
+}
 
-// build scene and set duration to window height
-new ScrollMagic.Scene({
-    triggerElement: "#imgBox",
-    triggerHook: 0.9,
-    offset: 50, // move trigger to center of element
-    reverse: false // only do once
-})
-.setClassToggle("#imgContain-1", "visible") // add class toggle
-.addIndicators() // add indicators (requires plugin)
-.addTo(controller);
+function animateLineOut(element) {
+    element.style.opacity = '1';
+    element.style.left = '60%';
+}
 
+function animateLineOut2(element) {
+    element.style.opacity = '1';
+    element.style.left = '48%';
+}
 
