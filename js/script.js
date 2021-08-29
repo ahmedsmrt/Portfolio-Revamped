@@ -24,11 +24,18 @@ linesArr = lineWrap.querySelectorAll('div'),
 line4 = document.getElementById('bll'),
 line2 = document.getElementById('tll'),
 letter4 = document.getElementById('l4'),
-letter2 = document.getElementById('l2');
+letter2 = document.getElementById('l2'),
 line1 = document.getElementById('trl'),
 line3 = document.getElementById('brl'),
 letter1 = document.getElementById('l1'),
-letter3 = document.getElementById('l3');
+letter3 = document.getElementById('l3'),
+lines = document.getElementsByClassName('line'),
+welcome = document.getElementById('welcome_text'),
+fbShort = document.getElementById('fb'),
+igShort = document.getElementById('ig'),
+ghShort = document.getElementById('gh'),
+shortCuts = document.getElementById('shortcutsWrap');
+
 
 
 anchors.forEach((e) => {
@@ -55,40 +62,52 @@ anchors.forEach((e) => {
 
 linksArr.forEach((e, i) => {
         linksArr[i].addEventListener('mouseover', function(event) {
-            linesArr[i].style.transition ='.4s';
+        //  linesArr[i].style.transition ='.4s';
             linesArr[i].style.opacity = 0;
             linesArr[i].style.transform = 'translateX(300%)';        
         })
         linksArr[i].addEventListener('mouseleave', function(event) {
-            linesArr[i].style.transition ='.4s';
+            // linesArr[i].style.transition ='.4s';
             linesArr[i].style.opacity = 1;
             linesArr[i].style.transform = 'translateX(-30%)';         
         })
 
 });
 
-wrap_1.addEventListener('mouseenter', function(event) {
-  
-    animateIn(letter4);
-    animateLine(line4);
-    animateIn(letter2);
-    animateLine(line2);
-    animateLine2(line1);
-    animateLine2(line3);
-    animateIn2(letter3);
-    animateIn2(letter1);
+// Nav Enter
 
+wrap_1.addEventListener('mouseenter', function() {
+    
+        animateIn(letter4);
+        animateLine(line4);
+        animateIn(letter2);
+        animateLine(line2);
+        animateIn2(letter3);
+        animateLine2(line3);
+        animateIn2(letter1);
+        animateLine2(line1);
+    welcome.style.transform = 'translateX(15%)';
     cursor2.style.borderColor = 'white';
     cursor3.style.borderColor = 'white';
     cursor4.style.backgroundColor = 'white';
     linesArr.forEach((e) => {
-        linesArr[0].style.opacity = '1';
-        linesArr[1].style.opacity = '1';
-        linesArr[2].style.opacity = '1';
-        linesArr[3].style.opacity = '1';
+        e.style.opacity = '1';      
     });
+            shortCuts.style.opacity = "1";
+
+     fbShort.style.transform = "translateY(0%)";
+        fbShort.style.opacity = "1";
+    igShort.style.transform = "translateY(0%)";
+        igShort.style.opacity = "1";
+    ghShort.style.transform = "translateY(0%)";
+    ghShort.style.opacity = "1";
+
+
+
 }, false)
-wrap_1.addEventListener('mouseleave',function(event) {
+
+// Nav Leave
+wrap_1.addEventListener('mouseleave',function() {
     animateOut(letter4);
     animateLineOut(line4);
     animateOut(letter2);
@@ -100,7 +119,7 @@ wrap_1.addEventListener('mouseleave',function(event) {
     cursor2.style.borderColor = 'black';
     cursor3.style.borderColor = 'black';
     cursor4.style.backgroundColor = 'black';
-    linesArr.forEach((e) => {
+    linesArr.forEach(() => {
         linesArr[0].style.opacity = '0';
         linesArr[0].style.transition = '1s';
         linesArr[1].style.opacity = '0';
@@ -110,18 +129,16 @@ wrap_1.addEventListener('mouseleave',function(event) {
         linesArr[3].style.opacity = '0';
         linesArr[3].style.transition = '.25s';
     });
+        welcome.style.transform = "translateX(0%)";
+        shortCuts.style.opacity = '0';
+        fbShort.style.transform = 'translateY(205%)';
+        igShort.style.transform = "translateY(205%)";
+        ghShort.style.transform = "translateY(205%)";
+
+
 },false )
 
-// Letter Animation
 
-// setInterval(() => {
-//     letter1.style.right = '600%';
-//     letter2.style.right = '600%';
-//     setInterval(() => {
-//         letter1.style.right = '.1rem';
-//         letter2.style.right = '.1rem';
-//     }, 500);
-// }, 2000);
 
 function animateIn(element) {
     element.style.opacity = '0';
@@ -142,6 +159,20 @@ function animateOut2(element) {
     element.style.opacity = '1';
     element.style.transform = 'rotate(-90deg)';
 }
+
+
+function initnav() {
+          line1.style.left = "48%";
+          line2.style.left = "60%";
+          line3.style.left = "48%";
+          line4.style.left = "60%";
+         letter1.style.transform = "rotate(-90deg)";
+         letter2.style.transform = "rotate(-90deg)";
+         letter3.style.transform = "rotate(-90deg)";
+         letter4.style.transform = "rotate(-90deg)";
+
+}
+initnav();
 
 
 // Line Animation
