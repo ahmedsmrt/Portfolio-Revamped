@@ -130,7 +130,6 @@ wrap_1.addEventListener('mouseleave',function() {
         linesArr[3].style.transition = '.25s';
     });
         welcome.style.transform = "translateX(0%)";
-        shortCuts.style.opacity = '0';
         fbShort.style.transform = 'translateY(205%)';
         igShort.style.transform = "translateY(205%)";
         ghShort.style.transform = "translateY(205%)";
