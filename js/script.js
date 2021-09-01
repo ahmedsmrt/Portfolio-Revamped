@@ -130,9 +130,9 @@ wrap_1.addEventListener('mouseleave',function() {
         linesArr[3].style.transition = '.25s';
     });
         welcome.style.transform = "translateX(0%)";
-        fbShort.style.transform = 'translateY(205%)';
-        igShort.style.transform = "translateY(205%)";
-        ghShort.style.transform = "translateY(205%)";
+        fbShort.style.transform = 'translateY(140%)';
+        igShort.style.transform = "translateY(140%)";
+        ghShort.style.transform = "translateY(140%)";
 
 
 },false )
@@ -204,3 +204,74 @@ function animateLineOut2(element) {
     element.style.left = '48%';
 }
 
+
+
+// Face Animation
+let faceAnc = document.getElementById('face_anchor');
+let svgWrap = document.getElementById('svg_wrap');
+let svgCollection = svgWrap.querySelectorAll('svg');
+let svgPath = svgCollection[0].querySelectorAll('path');
+let animateClass = document.getElementsByClassName('.animateHair');
+let x = 7;
+let interval = 500;
+
+
+
+// const hairdo = () => {
+//     for (let i = 0; i < x; i++) {
+//       setTimeout(function () {
+//         svgPath[i].classList.toggle("animateHair");
+//       }, i * interval);
+//     }
+// };
+
+
+// let faceMeausre = document.getElementById('face_features');
+// let facePath = faceMeausre.getElementsByTagName('path');
+let newFace = document.getElementById('newFace');
+let newFacePath = newFace.getElementsByTagName('path');
+
+const newFaces = () => {
+    newFacePath[0].classList.toggle('animateNew')
+}
+
+const newSegment = () => {
+    segment.style.strokeDasharray = "599px";
+    segment.style.strokeDashoffset = "599px";
+  segmentPath[0].classList.toggle("animateFace");
+};
+
+
+
+let segment = document.getElementById('face_segment');
+let segmentPath = segment.getElementsByTagName('path');
+
+console.log(segmentPath[0].getTotalLength());
+
+// newFaces();
+
+
+
+// const faceFeat = () => {
+//   for (let i = 0; i < facePath.length; i++) {
+//     setTimeout(function () {
+//       facePath[i].classList.toggle("animateFace");
+//     }, i * interval);
+//   }
+// };
+
+
+
+// for(let i = 0; i < facePath.length; i++) {
+//     console.log(facePath[i])
+// console.log(facePath[i].getTotalLength());
+
+// }
+
+
+// //  faceFeat();
+// //  hairdo();
+faceAnc.addEventListener('mouseover', () => {
+    newSegment();
+    newFaces();
+})
