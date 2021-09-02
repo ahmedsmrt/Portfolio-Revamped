@@ -232,13 +232,14 @@ let newFace = document.getElementById('newFace');
 let newFacePath = newFace.getElementsByTagName('path');
 
 const newFaces = () => {
-    newFacePath[0].classList.toggle('animateNew')
+    newFacePath[0].classList.add('animateNew')
+    newFacePath[0].classList.add("animateNew2");
 }
 
 const newSegment = () => {
     segment.style.strokeDasharray = "599px";
     segment.style.strokeDashoffset = "599px";
-  segmentPath[0].classList.toggle("animateFace");
+  segmentPath[0].classList.add("animateFace");
 };
 
 
@@ -275,3 +276,13 @@ faceAnc.addEventListener('mouseover', () => {
     newSegment();
     newFaces();
 })
+
+
+let faceLetters = faceAnc.getElementsByTagName('span');
+
+console.log(faceLetters)
+
+for(let j = 0; j <= faceLetters.length; j++) {
+    console.log(faceLetters[j]);
+
+}
